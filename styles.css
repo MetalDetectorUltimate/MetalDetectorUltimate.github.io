@@ -1,0 +1,81 @@
+body {
+	background: linear-gradient(to bottom, #ffe6ea, #ffccd2);
+}
+
+h1 {
+	text-align: center;
+	font-size: 3rem;
+	margin-top: 50px;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.description {
+	width: 50%;
+	padding-right: 50px;
+	font-size: 1.5rem;
+	margin-top: 50px;
+}
+
+.image-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: 50px;
+}
+
+.image-container img {
+	width: 1024px;
+	height: 500px;
+	margin: 10px;
+}
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-right: 50px;
+}
+
+.button {
+	padding: 20px;
+	font-size: 1.5rem;
+	background-color: #ff6b6b;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	margin: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.button:hover {
+	transform: scale(1.1);
+}
+
+@media only screen and (min-width: 768px) {
+	.container {
+		flex-direction: row;
+	}
+	.description {
+		width: 50%;
+		padding-right: 50px;
+	}
+	.image-container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.button-container {
+		position: absolute;
+		top: 50%;
+		right: 50px;
+		transform: translateY(-50%);
+	}

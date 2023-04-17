@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Удаление данных из приложения</title>
+  <style>
+    /* Стили для формы */
+    form {
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #666;
+    }
+
+    /* Стили для сообщения об удалении данных */
+    .message {
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .message p {
+      font-size: 24px;
+      color: #333;
+      margin: 50px 0;
+    }
+
+    .message button {
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .message button:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <!-- Форма для ввода адреса электронной почты -->
+  <form action="#" method="post">
+    <label for="email">Введите адрес вашей электронной почты:</label>
+    <br>
+    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+    <br>
+    <input type="submit" value="Отправить">
+  </form>
+
+  <!-- Сообщение об удалении данных -->
+  <div class="message" style="display:none">
+    <p>Ваши данные были удалены из нашей базы данных.</p>
+    <button onclick="location.href='index.html'">Вернуться на главную страницу</button>
+  </div>
+
+  <!-- Скрипт для обработки формы и показа сообщения об удалении данных -->
+  <script>
+    const form = document.querySelector('form');
+    const message = document.querySelector('.message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      message.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
